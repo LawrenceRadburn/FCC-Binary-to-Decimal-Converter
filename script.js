@@ -3,7 +3,7 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 function checkUserInput() {
-    if (!numberInput.valu || parseInt(numberInput.value)) {
+    if (!numberInput.valu || isNaN(parseInt(numberInput.value)) || parseInt(numberInput.value) < 0) {
 
     }
     console.log(numberInput.value);
