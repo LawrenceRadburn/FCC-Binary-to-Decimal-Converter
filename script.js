@@ -19,5 +19,5 @@ numberInput.addEventListener("keydown", (e) => {
 });
 
 function decimalToBinary(input) {
-
+    numberInput.value = "";
 };
