@@ -3,7 +3,13 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 function decimalToBinary(input) {
-    return "1";
+    const inputs = [];
+    const quotients = [];
+    const remainders = [];
+    while(input > 0) {
+        const quotient = Math.floor(input / 2);
+        input = quotient;
+    }
 };
 
 function checkUserInput() {
