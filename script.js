@@ -15,6 +15,8 @@ function decimalToBinary(input) {
         input = quotient;
     }
     console.log("Inputs: ", inputs);
+    console.log("Quotients: ", quotients);
+    console.log("Remainders: ", remainders);
 };
 
 function checkUserInput() {
