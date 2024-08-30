@@ -17,7 +17,7 @@ countDownAndUp(3);
 
 const decimalToBinary = (input) => {
     if (input === 0) {
-        return "";
+        return "0";
     } else {
         return (decimalToBinary(Math.floor(input / 2)) + (input % 2));
     }
@@ -35,6 +35,7 @@ const checkUserInput = () => {
   }
 
   decimalToBinary(parseInt(numberInput.value));
+  result.textContent = decimalToBinary();
   numberInput.value = "";
 };
 
