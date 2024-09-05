@@ -2,27 +2,21 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
-function countDownAndUp(number) {
-    console.log(number);
-    if (number === 0) {
-        console.log("Reached base case");
-        return;
-    } else {
-        countDownAndUp(number -1);
-        console.log(number);
-    }
-}
-
-countDownAndUp(3);
-
 const decimalToBinary = (input) => {
     if (input === 0 || input === 1) {
         return String(input);
+    } else {
+        return decimalToBinary(Math.floor(input / 2)) + (input % 2);
     }
 };
 
+function showAnimation() {
+    
+}
+
 
 const checkUserInput = () => {
+    const inputInt = parseInt(numberInput.value);
   if (
     !numberInput.value ||
     isNaN(parseInt(numberInput.value)) ||
@@ -30,10 +24,14 @@ const checkUserInput = () => {
   ) {
     alert("Please provide a decimal number greater than or equal to 0");
     return;
+    }
+  if (parseInt(numberInput.value) == 5) {
+    showAnimation();
+    return;
   }
 
-  decimalToBinary(parseInt(numberInput.value));
-  result.textContent = decimalToBinary();
+  
+  result.textContent = decimalToBinary(parseInt(numberInput.value));
   numberInput.value = "";
 };
 
