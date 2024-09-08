@@ -11,7 +11,9 @@ const decimalToBinary = (input) => {
 };
 
 function showAnimation() {
-    
+    console.log("free")
+    console.log("Code")
+    console.log("Camp")
 }
 
 
