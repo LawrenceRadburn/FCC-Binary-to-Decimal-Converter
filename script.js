@@ -1,6 +1,11 @@
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
+const animationData = [
+  {inputVal: 5,
+   addElDelay: 1000  
+  }
+];
 
 const decimalToBinary = (input) => {
     if (input === 0 || input === 1) {
@@ -16,8 +21,11 @@ function showAnimation() {
     }, 500)
     setTimeout(() => {
       console.log("Code");
-    }, 1000)
-    console.log("Camp")
+    }, 1000);
+    setTimeout( () => {
+      console.log("Camp")
+    }, 1500)
+    
 }
 
 
